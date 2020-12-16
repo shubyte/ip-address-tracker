@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,400;1,500&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+#mapid {
+  height: 65vh;
+  position: relative;
+  z-index: 0;
+}
+
+.bg-pattern {
+  background: url("./images/pattern-bg.png");
+  position: relative;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  border-radius: 15px;
+  width: 75vw;
+  margin: -5% 12.5vw;
+  z-index: 100;
+  padding: 40px;
+}
+
+.container__rows {
+  column-count: 4;
+  column-gap: auto;
+  column-rule: 1px solid hsl(0, 0%, 59%);
+}
+
+.container__rows .description {
+  /* column-span: initial; */
+  /* font-size: 12px; */
+  list-style: none;
+  color: hsl(0, 0%, 59%);
+  margin-top: 0;
+}
+
+.container__rows li {
+  font-size: 24px;
+  font-weight: 700;
+  list-style: none;
+}
+/* .container__rows:not(:first-child)::before {
+    content: '';
+    height: 60px;
+    width: 1px;
+    background-color: rgb(211, 206, 206);
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.ip__input {
+  width: 35vw;
+  height: 2rem;
+  border-radius: 15px;
+  border: none;
+
+}
+
+.ip__input:focus,
+.ip__input--btn:focus {
+  outline: none;
+}
+
+.ip__input--btn {
+  /* position: absolute; */
+  margin: -30px;
+  background: url(./images/icon-arrow.svg) no-repeat center;
+  background-size: 1.3rem;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.15rem;
+  width: 2.2rem;
+  background-color: black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: black;
+  border:none;
+}
+
+@media screen and (max-width: 1120px) {
+  .container {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+    width: 75vw;
+    margin: -5% 12.5%;
+    z-index: 100;
+    padding: 40px;
+ display: flex; }
+  .container__rows ul{
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .container__rows ul {
+    text-align: center;
+    list-style: none;
+  }
+}
